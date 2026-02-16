@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h1>My To Do List</h1>
+            
+            <div class="view-tabs">
+                <button id="activeTab" class="tab-btn active">Active Tasks</button>
+                <button id="archiveTab" class="tab-btn">Archive</button>
+            </div>
+
+            <div id="activeView" class="view">
+                <div class="input-section">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        placeholder="Add a new task..." 
+                        class="task-input"
+                    >
+                    <button id="addBtn" class="add-btn">Add Task</button>
+                </div>
+
+                <ul id="taskList" class="task-list">
+                    <!-- Tasks will be added here dynamically -->
+                </ul>
+
+                <div class="task-stats">
+                    <span id="taskCount">0 tasks</span>
+                </div>
+            </div>
+
+            <div id="archiveView" class="view hidden">
+                <ul id="archiveList" class="task-list">
+                    <!-- Archived tasks will be added here dynamically -->
+                </ul>
+
+                <div class="task-stats">
+                    <span id="archiveCount">0 archived tasks</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
